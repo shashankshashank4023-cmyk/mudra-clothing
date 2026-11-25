@@ -1,0 +1,274 @@
+/* ==========================================================================
+   MUDRA SARTORIAL // LUXURY MENSWEAR DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+  /* Luxury Palette */
+  --color-obsidian: #121417;
+  --color-dark-panel: #1A1D23;
+  --color-dark-border: rgba(255, 255, 255, 0.08);
+  --color-cream: #F9F7F2;
+  --color-sand: #EFECE4;
+  --color-stone: #E2DDD5;
+  --color-muted: #848A96;
+  --color-gold: #C5A059;
+  --color-gold-light: #DFC088;
+  --color-gold-glow: rgba(197, 160, 89, 0.18);
+  --color-terracotta: #A85A48;
+  --color-navy: #152238;
+  --color-emerald: #1B3B2B;
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Elevation & Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.14);
+  --shadow-gold: 0 4px 20px rgba(197, 160, 89, 0.25);
+
+  /* Transitions */
+  --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-obsidian);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--color-cream);
+  line-height: 1.6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-sand);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-obsidian);
+}
+
+/* Typography Utilities */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.luxury-heading {
+  font-family: var(--font-serif);
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  color: var(--color-obsidian);
+}
+
+.gold-accent {
+  color: var(--color-gold);
+}
+
+/* Button Component Styles */
+.btn-mudra-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background-color: var(--color-obsidian);
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.95rem 2rem;
+  border: 1px solid var(--color-obsidian);
+  border-radius: 0px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-mudra-primary:hover {
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-obsidian);
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-2px);
+}
+
+.btn-mudra-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background-color: var(--color-gold);
+  color: var(--color-obsidian);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.95rem 2rem;
+  border: 1px solid var(--color-gold);
+  border-radius: 0px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-mudra-gold:hover {
+  background-color: var(--color-obsidian);
+  border-color: var(--color-obsidian);
+  color: var(--color-cream);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.btn-mudra-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background-color: transparent;
+  color: var(--color-obsidian);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.95rem 2rem;
+  border: 1px solid var(--color-obsidian);
+  border-radius: 0px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-mudra-secondary:hover {
+  background-color: var(--color-obsidian);
+  color: var(--color-cream);
+  transform: translateY(-2px);
+}
+
+/* Gold Badge & Chips */
+.mudra-badge {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  background-color: var(--color-cream);
+  color: var(--color-gold);
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  box-shadow: var(--shadow-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Sliding Drawer Transitions */
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 20, 23, 0.65);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  justify-content: flex-end;
+  animation: fadeIn 0.3s ease;
+}
+
+.drawer-panel {
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+  background: #FFF;
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  animation: slideRightIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Modal Backdrop & Animations */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 20, 23, 0.75);
+  backdrop-filter: blur(10px);
+  z-index: 2100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-container {
+  background: #FFF;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Toast Notification */
+.mudra-toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 3000;
+  background: var(--color-obsidian);
+  color: var(--color-cream);
+  padding: 1rem 1.6rem;
+  border-left: 3px solid var(--color-gold);
+  box-shadow: var(--shadow-lg);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  animation: toastSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideRightIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes toastSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
